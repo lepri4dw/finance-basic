@@ -2,14 +2,14 @@ import React, {useEffect} from 'react';
 import {useAppDispatch, useAppSelector} from "../../app/hooks";
 import {useNavigate, useParams} from "react-router-dom";
 import {
-  fetchCategory,
   selectCategoryUpdateLoading,
   selectOneCategory,
-  selectOneCategoryFetchLoading, updateCategory
+  selectOneCategoryFetchLoading,
 } from "../../store/categoriesSlice";
 import {ApiCategory} from "../../types";
 import Spinner from "../../components/Spinner/Spinner";
 import CategoryForm from "../../components/CategoryForm/CategoryForm";
+import {fetchCategory, updateCategory} from "../../store/categoriesThunks";
 
 const EditCategory = () => {
   const dispatch = useAppDispatch();

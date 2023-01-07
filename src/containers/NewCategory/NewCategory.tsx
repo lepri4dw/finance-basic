@@ -1,9 +1,10 @@
 import React from 'react';
 import {useAppDispatch, useAppSelector} from "../../app/hooks";
-import {createCategory, selectCategoryCreateLoading} from "../../store/categoriesSlice";
+import {selectCategoryCreateLoading} from "../../store/categoriesSlice";
 import {ApiCategory} from "../../types";
 import {useNavigate} from "react-router-dom";
 import CategoryForm from "../../components/CategoryForm/CategoryForm";
+import {createCategory} from "../../store/categoriesThunks";
 
 const NewCategory = () => {
   const dispatch = useAppDispatch();

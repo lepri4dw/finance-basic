@@ -12,7 +12,7 @@ const Navbar = () => {
                 <NavLink to="/categories" className="nav-link">Categories</NavLink>
               </li>
               <li className="nav-item">
-                <span className="nav-link">Add</span>
+                <NavLink to="/new-transaction" className="nav-link">Add</NavLink>
               </li>
             </ul>
           </div>

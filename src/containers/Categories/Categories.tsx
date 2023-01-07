@@ -1,8 +1,6 @@
 import React, {useEffect} from 'react';
 import {useAppDispatch, useAppSelector} from "../../app/hooks";
 import {
-  deleteCategory,
-  fetchCategories,
   selectCategories,
   selectCategoriesFetchLoading,
   selectCategoryDeleteLoading
@@ -10,6 +8,7 @@ import {
 import Spinner from "../../components/Spinner/Spinner";
 import {PencilSquare, TrashFill} from "react-bootstrap-icons";
 import {Link} from "react-router-dom";
+import {deleteCategory, fetchCategories} from "../../store/categoriesThunks";
 
 const Categories = () => {
   const dispatch = useAppDispatch();
@@ -35,7 +34,6 @@ const Categories = () => {
       </div>
       <div className="mt-3">
         {fetchLoading ? <Spinner/> : categories.map(category => (
-          <>
             <div key={category.id} className="card w-50 mb-3">
               <div className="card-body d-flex my-auto justify-content-between">
                 <span>{category.name}</span>
@@ -46,7 +44,6 @@ const Categories = () => {
                 </div>
               </div>
             </div>
-          </>
         ))}
       </div>
 
