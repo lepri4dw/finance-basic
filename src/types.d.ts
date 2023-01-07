@@ -4,10 +4,7 @@ export interface Category {
   id: string;
 }
 
-export interface ApiCategory {
-  type: string;
-  name: string;
-}
+export type ApiCategory = Omit<Category, "id">
 
 export interface ApiCategoriesList {
   [id: string]: ApiCategory;

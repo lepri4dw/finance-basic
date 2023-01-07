@@ -20,7 +20,7 @@ const initialState: CategoriesState = {
   createLoading: false,
   deleteLoading: false,
   fetchOneLoading: false,
-  oneCategory: null
+  oneCategory: null,
 }
 
 export const fetchCategories = createAsyncThunk(
